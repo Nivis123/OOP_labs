@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Kirill Zimaltynov/Desktop/Cpp/lab0/src/countWord.cpp" "CMakeFiles/lab0.dir/src/countWord.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/countWord.cpp.obj.d"
-  "C:/Users/Kirill Zimaltynov/Desktop/Cpp/lab0/src/main.cpp" "CMakeFiles/lab0.dir/src/main.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/main.cpp.obj.d"
+  "C:/Users/Kirill Zimaltynov/Desktop/OOP_Projects/lab0/src/Counter.cpp" "CMakeFiles/lab0.dir/src/Counter.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/Counter.cpp.obj.d"
+  "C:/Users/Kirill Zimaltynov/Desktop/OOP_Projects/lab0/src/Reader.cpp" "CMakeFiles/lab0.dir/src/Reader.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/Reader.cpp.obj.d"
+  "C:/Users/Kirill Zimaltynov/Desktop/OOP_Projects/lab0/src/Writer.cpp" "CMakeFiles/lab0.dir/src/Writer.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/Writer.cpp.obj.d"
+  "C:/Users/Kirill Zimaltynov/Desktop/OOP_Projects/lab0/src/main.cpp" "CMakeFiles/lab0.dir/src/main.cpp.obj" "gcc" "CMakeFiles/lab0.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

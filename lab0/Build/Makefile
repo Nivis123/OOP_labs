@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Kirill Zimaltynov\Desktop\Cpp\lab0"
+CMAKE_SOURCE_DIR = "C:\Users\Kirill Zimaltynov\Desktop\OOP_Projects\lab0"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Kirill Zimaltynov\Desktop\Cpp\lab0\Build"
+CMAKE_BINARY_DIR = "C:\Users\Kirill Zimaltynov\Desktop\OOP_Projects\lab0\Build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Kirill Zimaltynov\Desktop\Cpp\lab0\Build\CMakeFiles" "C:\Users\Kirill Zimaltynov\Desktop\Cpp\lab0\Build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Kirill Zimaltynov\Desktop\OOP_Projects\lab0\Build\CMakeFiles" "C:\Users\Kirill Zimaltynov\Desktop\OOP_Projects\lab0\Build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Kirill Zimaltynov\Desktop\Cpp\lab0\Build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Kirill Zimaltynov\Desktop\OOP_Projects\lab0\Build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -128,29 +128,77 @@ lab0/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/build
 .PHONY : lab0/fast
 
-src/countWord.obj: src/countWord.cpp.obj
-.PHONY : src/countWord.obj
+src/Counter.obj: src/Counter.cpp.obj
+.PHONY : src/Counter.obj
 
 # target to build an object file
-src/countWord.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/countWord.cpp.obj
-.PHONY : src/countWord.cpp.obj
+src/Counter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Counter.cpp.obj
+.PHONY : src/Counter.cpp.obj
 
-src/countWord.i: src/countWord.cpp.i
-.PHONY : src/countWord.i
+src/Counter.i: src/Counter.cpp.i
+.PHONY : src/Counter.i
 
 # target to preprocess a source file
-src/countWord.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/countWord.cpp.i
-.PHONY : src/countWord.cpp.i
+src/Counter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Counter.cpp.i
+.PHONY : src/Counter.cpp.i
 
-src/countWord.s: src/countWord.cpp.s
-.PHONY : src/countWord.s
+src/Counter.s: src/Counter.cpp.s
+.PHONY : src/Counter.s
 
 # target to generate assembly for a file
-src/countWord.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/countWord.cpp.s
-.PHONY : src/countWord.cpp.s
+src/Counter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Counter.cpp.s
+.PHONY : src/Counter.cpp.s
+
+src/Reader.obj: src/Reader.cpp.obj
+.PHONY : src/Reader.obj
+
+# target to build an object file
+src/Reader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Reader.cpp.obj
+.PHONY : src/Reader.cpp.obj
+
+src/Reader.i: src/Reader.cpp.i
+.PHONY : src/Reader.i
+
+# target to preprocess a source file
+src/Reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Reader.cpp.i
+.PHONY : src/Reader.cpp.i
+
+src/Reader.s: src/Reader.cpp.s
+.PHONY : src/Reader.s
+
+# target to generate assembly for a file
+src/Reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Reader.cpp.s
+.PHONY : src/Reader.cpp.s
+
+src/Writer.obj: src/Writer.cpp.obj
+.PHONY : src/Writer.obj
+
+# target to build an object file
+src/Writer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Writer.cpp.obj
+.PHONY : src/Writer.cpp.obj
+
+src/Writer.i: src/Writer.cpp.i
+.PHONY : src/Writer.i
+
+# target to preprocess a source file
+src/Writer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Writer.cpp.i
+.PHONY : src/Writer.cpp.i
+
+src/Writer.s: src/Writer.cpp.s
+.PHONY : src/Writer.s
+
+# target to generate assembly for a file
+src/Writer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab0.dir\build.make CMakeFiles/lab0.dir/src/Writer.cpp.s
+.PHONY : src/Writer.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -185,9 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab0
-	@echo ... src/countWord.obj
-	@echo ... src/countWord.i
-	@echo ... src/countWord.s
+	@echo ... src/Counter.obj
+	@echo ... src/Counter.i
+	@echo ... src/Counter.s
+	@echo ... src/Reader.obj
+	@echo ... src/Reader.i
+	@echo ... src/Reader.s
+	@echo ... src/Writer.obj
+	@echo ... src/Writer.i
+	@echo ... src/Writer.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

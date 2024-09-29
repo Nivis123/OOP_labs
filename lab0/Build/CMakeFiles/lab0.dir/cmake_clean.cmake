@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab0.dir/src/countWord.cpp.obj"
-  "CMakeFiles/lab0.dir/src/countWord.cpp.obj.d"
+  "CMakeFiles/lab0.dir/src/Counter.cpp.obj"
+  "CMakeFiles/lab0.dir/src/Counter.cpp.obj.d"
+  "CMakeFiles/lab0.dir/src/Reader.cpp.obj"
+  "CMakeFiles/lab0.dir/src/Reader.cpp.obj.d"
+  "CMakeFiles/lab0.dir/src/Writer.cpp.obj"
+  "CMakeFiles/lab0.dir/src/Writer.cpp.obj.d"
   "CMakeFiles/lab0.dir/src/main.cpp.obj"
   "CMakeFiles/lab0.dir/src/main.cpp.obj.d"
   "lab0.exe"

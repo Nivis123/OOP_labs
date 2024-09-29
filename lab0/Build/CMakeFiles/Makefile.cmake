@@ -33,7 +33,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.30.3/CMakeSystem.cmake"
-  "C:/Users/Kirill Zimaltynov/Desktop/Cpp/lab0/CMakeLists.txt"
+  "C:/Users/Kirill Zimaltynov/Desktop/OOP_Projects/lab0/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
