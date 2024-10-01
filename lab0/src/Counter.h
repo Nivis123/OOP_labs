@@ -10,6 +10,6 @@
 class Counter {
 public:
 
-    std::map<std::string, int> count(const std::list<std::string>& lines) ;
+    std::map<std::string, int> Count(const std::string &lines);
 };
 #endif

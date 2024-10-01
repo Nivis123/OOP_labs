@@ -9,7 +9,6 @@
 #include <fstream>
 class Reader {
 public:
-    std::list<std::string> read(const std::string& filename);
-     
+    std::map<std::string, int> read(const std::string& filename,std::map<std::string, int> wordMap);   
 };
 #endif

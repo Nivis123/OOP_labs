@@ -9,7 +9,6 @@
 #include <fstream>
 class Writer {
 public:
-    // Запись в файл списка пар "слово - частота"
     void write(const std::string& filename, const std::map<std::string, int>& wordMap, int totalCount);
 
 private:
