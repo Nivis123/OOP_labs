@@ -105,60 +105,6 @@ BitArray& BitArray::operator^=(const BitArray& b) {
     return *this;
 }
 
-//BitArray& BitArray::operator<<=(int n) {
-//    if (n < 0) {
-//        throw std::invalid_argument("Shift amount must be non-negative");
-//    }
-//    if (n >= Size) {
-//        reset(); 
-//        return *this;  
-//    }
-//    
-//    int words = n / (sizeof(unsigned long) * 8);
-//    int bits = n % (sizeof(unsigned long) * 8);
-//    
-//    if (words > 0) {
-//        for (int i = Data.size() - 1; i >= words; --i) {
-//            Data[i] = Data[i - words];
-//        }
-//        std::fill(Data.begin(), Data.begin() + words, 0); }
-//    
-//    if (bits > 0) {
-//        for (int i = Data.size() - 1; i > 0; --i) {
-//            Data[i] = (Data[i] << bits) | (Data[i - 1] >> (sizeof(unsigned long) * 8 - bits));
-//        }
-//        Data[0] <<= bits; 
-//    }
-//    
-//    return *this;
-//}
-//
-//BitArray& BitArray::operator>>=(int n) {
-//    if (n < 0) {
-//        throw std::invalid_argument("Shift amount must be non-negative");
-//    }
-//    if (n >= Size) {
-//        reset(); 
-//        return *this; }
-//    
-//    int words = n / (sizeof(unsigned long) * 8);
-//    int bits = n % (sizeof(unsigned long) * 8);
-//    
-//    if (words > 0) {
-//        for (int i = 0; i < Data.size() - words; ++i) {
-//            Data[i] = Data[i + words];
-//        }
-//        std::fill(Data.end() - words, Data.end(), 0); }
-//    
-//    if (bits > 0) {
-//        for (int i = 0; i < Data.size() - 1; ++i) {
-//            Data[i] = (Data[i] >> bits) | (Data[i + 1] << (sizeof(unsigned long) * 8 - bits));
-//        }
-//        Data.back() >>= bits; 
-//    }
-//    
-//    return *this;
-//}
 BitArray& BitArray::operator>>=(int n) {
     if (n < 0) {
         throw std::invalid_argument("Index must be non-negative");
