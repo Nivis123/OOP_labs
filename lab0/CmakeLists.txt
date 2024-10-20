@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 3.30)
+project(lab0)
+
+add_executable(${PROJECT_NAME} src/main.cpp src/Reader.cpp src/Counter.cpp src/Writer.cpp)
