@@ -8,38 +8,32 @@ using namespace std;
 
 TEST(BitArrayTest, DefaultConstructor) {
     BitArray bits;
-    ASSERT_EQ(bits.size(), 0);
+    ASSERT_EQ(bits.Size(), 0);
     ASSERT_TRUE(bits.empty());
 }
 
 TEST(BitArrayTest, ConstructorWithSize) {
     BitArray bits(10);
-    ASSERT_EQ(bits.size(), 10);
+    ASSERT_EQ(bits.Size(), 10);
     ASSERT_FALSE(bits.empty());
     ASSERT_EQ(bits.to_string(), "0000000000");
 }
 
-//TEST(BitArrayTest, ConstructorWithSizeAndValue) {
-//    BitArray bits(10, 1);
-//    ASSERT_EQ(bits.to_string(), "0000000001");
-//}
-
 TEST(BitArrayConstructorTest, ValidInitialization) {
-    // Тестируем инициализацию с 5 битами и значением 0b10101
     BitArray ba(5, 0b10101);
-    ASSERT_EQ(ba.size(), 5);
+    ASSERT_EQ(ba.Size(), 5);
     ASSERT_EQ(ba.to_string(), "10101");
 }
 
 TEST(BitArrayConstructorTest, AllBitsSet) {
     BitArray ba(8, 0b11111111);
-    ASSERT_EQ(ba.size(), 8);
+    ASSERT_EQ(ba.Size(), 8);
     ASSERT_EQ(ba.to_string(), "11111111");
 }
 
 TEST(BitArrayConstructorTest, NoBitsSet) {
     BitArray ba(5, 0);
-    ASSERT_EQ(ba.size(), 5);
+    ASSERT_EQ(ba.Size(), 5);
     ASSERT_EQ(ba.to_string(), "00000");
 }
 
@@ -47,9 +41,6 @@ TEST(BitArrayConstructorTest, NoBitsSet) {
 TEST(BitArrayConstructorTest, NegativeBitsThrowsException) {
     ASSERT_THROW(BitArray ba(-1, 0), std::invalid_argument);
 }
-
-
-//
 
 TEST(BitArrayTest, CopyConstructor) {
     BitArray bits1(10, 1);
@@ -68,10 +59,10 @@ TEST(BitArrayTest, SetAndGet) {
 TEST(BitArrayTest, Resize) {
     BitArray bits(5);
     bits.resize(10);
-    ASSERT_EQ(bits.size(), 10);
+    ASSERT_EQ(bits.Size(), 10);
     ASSERT_EQ(bits.to_string(), "0000000000");
     bits.resize(3);
-    ASSERT_EQ(bits.size(), 3);
+    ASSERT_EQ(bits.Size(), 3);
     ASSERT_EQ(bits.to_string(), "000");
 }
 
@@ -103,41 +94,26 @@ TEST(BitArrayTest, BitwiseXor) {
     ASSERT_EQ(result.to_string(), "01110");
 }
 
-//TEST(BitArrayTest, ShiftLeft) {
-//    BitArray bits(5, 0b00001);
-//    bits <<= 1;
-//    ASSERT_EQ(bits.to_string(), "00010");
-//}
-//
-//TEST(BitArrayTest, ShiftRight) {
-//    BitArray bits(5, 0b00010);
-//    bits >>= 1;
-//    ASSERT_EQ(bits.to_string(), "00001");
-//}
-
-
 TEST(BitArrayShiftRightTest, ShiftRightByZero) {
-    BitArray ba(5, 0b10101); // Инициализируем 5 битами ba >>= 0; // Сдвиг на 0 
-    ASSERT_EQ(ba.to_string(), "10101"); // Ожидаем, что результат останется тем же
+    BitArray ba(5, 0b10101); 
+    ASSERT_EQ(ba.to_string(), "10101"); 
 }
 
 
 TEST(BitArrayShiftRightTest, ShiftRightNegative) {
-    BitArray ba(5, 0b10101); // Инициализируем 5 битами 
-    ASSERT_THROW(ba >>= -1, std::invalid_argument); // Ожидаем исключение
+    BitArray ba(5, 0b10101);
+    ASSERT_THROW(ba >>= -1, std::invalid_argument); 
 }
 
 TEST(BitArrayShiftLeftTest, ShiftLeftByZero) {
-    BitArray ba(5, 0b10101); // Инициализируем 5 битами ba <<= 0; // Сдвиг на 0 
-    ASSERT_EQ(ba.to_string(), "10101"); // Ожидаем, что результат останется тем же
+    BitArray ba(5, 0b10101); 
+    ASSERT_EQ(ba.to_string(), "10101"); 
 }
-
 
 TEST(BitArrayShiftLeftTest, ShiftLeftNegative) {
-    BitArray ba(5, 0b10101); // Инициализируем 5 битами 
-    ASSERT_THROW(ba <<= -1, std::invalid_argument); // Ожидаем исключение
+    BitArray ba(5, 0b10101); 
+    ASSERT_THROW(ba <<= -1, std::invalid_argument); 
 }
-//
 
 TEST(BitArrayTest, SetAll) {
     BitArray bits(5);

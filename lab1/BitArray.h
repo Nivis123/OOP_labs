@@ -15,7 +15,7 @@
  */
 class BitArray {
 private:
-    int Size;
+    int size_;
     std::vector<unsigned long> Data; ///< Internal storage for the bits.
      ///< The total number of bits in the BitArray.
 
@@ -199,7 +199,7 @@ public:
      * @brief Returns the total number of bits in the BitArray.
      * @return The size of the BitArray.
      */
-    int size() const;
+    int Size() const;
 
     /**
      * @brief Checks if the BitArray is empty (size is 0).
@@ -212,15 +212,8 @@ public:
      * @return A string representing the bits in the BitArray.
      */
     std::string to_string() const;
-};
 
-/**
- * @brief Compares two BitArrays for equality.
- * @param a The first BitArray.
- * @param b The second BitArray.
- * @return True if the BitArrays are equal, false otherwise.
- */
-bool operator==(const BitArray& a, const BitArray& b);
+    friend bool operator==(const BitArray& a, const BitArray& b);
 
 /**
  * @brief Compares two BitArrays for inequality.
@@ -228,6 +221,8 @@ bool operator==(const BitArray& a, const BitArray& b);
  * @param b The second BitArray.
  * @return True if the BitArrays are not equal, false otherwise.
  */
+};
+
 bool operator!=(const BitArray& a, const BitArray& b);
 
 /**
