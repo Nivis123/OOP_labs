@@ -1,3 +1,0 @@
-/home/kira/Pong-implementation-Cpp/build/CMakeFiles/Pong_Cpp.dir
-/home/kira/Pong-implementation-Cpp/build/CMakeFiles/edit_cache.dir
-/home/kira/Pong-implementation-Cpp/build/CMakeFiles/rebuild_cache.dir
